@@ -1671,7 +1671,7 @@
 
     window.setSessionId(sessionIdParamValue);
 
-    window.history.replaceState({}, document.title, "/");
+		window.history.replaceState({}, document.title, window.location.pathname);
 
     await window.restoreSessionFromCloud();
   };
