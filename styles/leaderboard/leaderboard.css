@@ -1,0 +1,136 @@
+body {
+	background-color: rgb(var(--color-0F0F1B));
+	background: url(../../images/leaderboard.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.container {
+	max-width: 1440px;
+	/* background-color: rgba(var(--color-3a3a3a)); */
+	margin: 0 auto;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.header {
+	background-color: rgb(var(--color-cf9f00));
+	height: 60px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.header-text {
+	margin-left: 2%;
+	color: rgb(var(--color-ffffee));
+}
+
+.content {
+	background-color: #292929f0;
+	height: 40px;
+	padding: 40px 30px;
+	height: calc(100vh - 60px);
+	overflow: hidden auto;
+}
+
+.leaderboard-grids {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px 10%;
+}
+
+.grid-item-container {
+	padding: 10px 20px;
+	border: 5px solid #4f4f4f;
+	border-radius: 10px;
+	border-style: double;
+}
+
+.category-grid > div {
+	padding: 1% 0;
+}
+
+.grid-item-container > .grid-header {
+	display: none;
+}
+
+.grid-item-container.has-content > .grid-header {
+	display: block;
+}
+
+.grid-header {
+	font-size: 80%;
+	color: rgb(var(--color-f7df6f));
+	margin-bottom: 3%;
+}
+
+.category-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	color: rgb(var(--color-ffffee));
+}
+
+.grid-item-position {
+  grid-column: 1 / span 2;
+	color: #b9b9b9;
+	font-size: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+.grid-item-name {
+  grid-column: 3 / span 9;
+}
+
+.grid-item-value {
+	grid-column: 12 / span 3;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+.grid-item-value {
+	text-align: right;
+}
+
+#fastest-level .grid-item-value {
+	font-size: 80%;
+}
+
+@media (max-width: 1280px) {
+	:root {
+		font-size: 14px;
+	}
+
+	.leaderboard-grids {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 5% 10%;
+	}
+
+	.category-grid > div:nth-child(n+16) {
+		display: none;
+	}
+}
+
+@media (max-width: 720px) {
+	:root {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 600px) {
+	:root {
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 412px) {
+	:root {
+		font-size: 8px;
+	}
+}
